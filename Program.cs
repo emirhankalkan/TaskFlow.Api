@@ -1,7 +1,15 @@
+using TaskFlow.Api.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddDbContext<TaskDbContext>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection") ?? "Data Source=taskflow.db"));
+builder.Services.AddScoped<TaskFlow.Api.Repositories.ITaskRepository, TaskFlow.Api.Repositories.TaskRepository>();
+builder.Services.AddScoped<TaskFlow.Api.Services.ITaskService, TaskFlow.Api.Services.TaskService>();
+builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -15,6 +23,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseRouting();
+app.UseAuthorization();
+app.MapControllers();
 
 var summaries = new[]
 {
