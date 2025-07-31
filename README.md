@@ -1,6 +1,6 @@
 # TaskFlow.Api
 
-## 🎯 Proje Amacı
+## Proje Amacı
 TaskFlow.Api, kullanıcıların görev (task) oluşturup, düzenleyip, tamamlamasını sağlayan basit ama ölçeklenebilir bir Task Management Web API uygulamasıdır. Modern yazılım geliştirme yaklaşımlarını uygulamak, temiz kod ve test odaklı geliştirmeyi teşvik etmek amacıyla oluşturulmuştur.
 
 ## 🛠️ Kullanılan Teknolojiler
@@ -14,7 +14,7 @@ TaskFlow.Api, kullanıcıların görev (task) oluşturup, düzenleyip, tamamlama
 | Git + GitHub            | Versiyon kontrolü ve kod paylaşımı                   |
 | Swagger / Swashbuckle   | API dökümantasyonu ve test arabirimi                 |
 
-## 🧱 Proje Yapısı
+## Proje Yapısı
 ```
 TaskFlow.Api/
 ├── Controllers/
@@ -34,7 +34,7 @@ TaskFlow.Tests/
 ├── TaskFlow.Tests.csproj
 ```
 
-## 🔌 API Özellikleri
+## API Özellikleri
 ### Görev (Task) Modeli
 - Id: int
 - Title: string
@@ -51,25 +51,24 @@ TaskFlow.Tests/
 | POST   | /api/tasks         | Yeni görev oluştur      |
 | PUT    | /api/tasks/{id}    | Görev güncelle          |
 | DELETE | /api/tasks/{id}    | Görevi sil              |
-
-## 🔍 Test Stratejisi
+## Test Stratejisi
 - Test Framework: xUnit
 - Test Edilecekler:
   - TaskService iş kuralları
   - CRUD işlemlerinin başarı ve hata senaryoları
   - Model validasyonları
 
-## 🐳 Docker Kullanımı
+##  Docker Kullanımı
 ```bash
 docker build -t taskflow-api .
 docker run -p 5000:80 taskflow-api
 ```
 
-## 🧪 Swagger UI
+##  Swagger UI
 Uygulama çalıştığında Swagger arayüzü ile test edilebilir:
 http://localhost:5000/swagger
 
-## ✅ Geliştirme Aşamaları
+## Geliştirme Aşamaları
 - Proje yapısı oluşturuldu
 - Temel modeller ve veritabanı yapısı hazırlandı
 - CRUD controller’lar geliştirildi
@@ -77,7 +76,7 @@ http://localhost:5000/swagger
 - Docker desteği eklendi
 - Swagger dökümantasyonu hazırlandı
 
-## 📦 Gelecek Geliştirmeler (Opsiyonel)
+##  Gelecek Geliştirmeler (Opsiyonel)
 - Kullanıcı doğrulama (JWT ile Authentication)
 - Görev etiketleme (Tagging)
 - Görev öncelik seviyesi (Priority)
