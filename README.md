@@ -3,7 +3,7 @@
 ## Proje Amacı
 TaskFlow.Api, kullanıcıların görev (task) oluşturup, düzenleyip, tamamlamasını sağlayan basit ama ölçeklenebilir bir Task Management Web API uygulamasıdır. Modern yazılım geliştirme yaklaşımlarını uygulamak, temiz kod ve test odaklı geliştirmeyi teşvik etmek amacıyla oluşturulmuştur.
 
-## 🛠️ Kullanılan Teknolojiler
+##  Kullanılan Teknolojiler
 | Teknoloji                | Açıklama                                              |
 |-------------------------|------------------------------------------------------|
 | ASP.NET Core 8          | Web API geliştirmek için modern, hızlı framework      |
